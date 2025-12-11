@@ -139,11 +139,13 @@ cd assignment-4
 For more details, see:  
 - [`docs/technical-documentation.md`](docs/technical-documentation.md)  
 - [`docs/ai-usage-report.md`](docs/ai-usage-report.md)  
+- [`presentation/Interactive-Portfolio-Showcase.pdf`](presentation/Interactive-Portfolio-Showcase.pdf) 
+
 
 ---
 
 ## 🚀 Live Demo  
-👉 [View Portfolio Online]() *(link will be added once deployed)*  
+👉 [View Portfolio Online]() *(https://drive.google.com/file/d/10aUwwSI3RH8sHUPaWnJB_nMqr53HjRq-/view?usp=drive_link)*  
 
 ---
 
