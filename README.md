@@ -1,26 +1,96 @@
-# 🌐 Personal Portfolio Website  
+# 🌐 Abdulrahman — Personal Portfolio  
+### Assignment 4 – Full Web Application
 
-A personal portfolio website built with **HTML**, **CSS**, and **JavaScript**.  
-It showcases my work, projects, and contact details in a **modern, interactive, and responsive design**.  
+This project is my complete personal portfolio web application built for **Assignment 4**.  
+It combines modern design, responsive layout, and interactive front-end features using **HTML, CSS, and JavaScript**.
+
+🔗 **Live Website:**  
+> https://arbody17.github.io/assignment-4/
 
 ---
 
-## ✨ Features 
-## 🎨 UI & Interactivity
+## ✨ Features
 
-- 📱 Fully responsive layout for desktop, tablet, and mobile
+### 🌗 Dark / Light Theme Toggle  
+- Uses CSS variables for dynamic themes  
+- Saves user preference using `localStorage`  
+- Accessible toggle with `aria-pressed`
 
-- 🌗 Dark / Light theme toggle with saved preference using localStorage
+### 🙋 Personalized Greeting  
+- Prompts the visitor for their name  
+- Saves it permanently using `localStorage`  
+- Generates a dynamic greeting based on time of day  
+- Typing and deleting animation cycles through messages
 
-- ⌨️ Typing animation greeting with dynamic text
+### 💬 Random Quote Generator  
+- Fetches quotes from an external API (`https://type.fit/api/quotes`)  
+- Includes graceful fallback quotes when API fails  
+- Refresh quote button
 
-- 🙋‍♂️ Personalized name greeting stored across visits
+### 🧩 Projects Section  
+- Project cards with images and descriptions  
+- **Filter** projects by category (Web, AI, Research)  
+- **Sort** by newest or oldest  
+- Saves filter/sort options using `localStorage`
 
-- 📝 About Me — “Read More ، Read Less” toggle
+### 🐙 GitHub Activity Integration  
+- Uses GitHub REST API  
+- Displays latest repositories with stars, update dates, and links  
+- Fully dynamic card rendering
 
-- 🖼️ Interactive project cards with hover effects, smooth spacing, and featured layout when filtered
+### 📬 Contact Form  
+- Validates name, email, message  
+- Email format validated with regex  
+- Dropdown suggestions for common domains  
+- Custom funny “message sent” popup  
+- (Front-end only — no backend)
 
-- 🔝 Scroll-to-top button in the footer
+### ⏱️ Visit Stats  
+- Tracks how long the user has been on the site  
+- Counts number of visits locally  
+- Runs entirely using browser storage
+
+### 📱 Responsive Design  
+- Mobile-first layout  
+- CSS Grid + Flexbox  
+- Smooth breakpoints at 800px and 500px
+
+---
+
+## 🧱 Tech Stack
+
+| Technology | Purpose |
+|-----------|---------|
+| **HTML5** | Structure |
+| **CSS3** | Theming, layout, animations |
+| **JavaScript (ES6)** | Logic, state management, interactivity |
+| **Git & GitHub** | Version control |
+| **GitHub Pages** | Deployment |
+| **External APIs** | Quotes API + GitHub API |
+
+---
+
+## 📂 Folder Structure
+
+## 📂 Folder Structure
+```
+assignment-4/
+├── index.html
+├── css/
+│ └── styles.css
+├── js/
+│ └── script.js
+├── assets/
+│ └── images/
+├── docs/
+│ ├── ai-usage-report.md
+│ └── technical-documentation.md
+├── presentation/
+│ ├── slides.pdf
+│ └── demo-video.mp4
+└── README.md
+
+```
 
 ## 🧠 Logic & State Management
 
@@ -60,23 +130,10 @@ This project is **front-end only** — no backend setup required.
 
 ### 1. Clone the Repository  
 ```bash
-git clone https://github.com/arbody17/assignment-3.git
-cd assignment-3
+git clone https://github.com/arbody17/assignment-4.git
+cd assignment-4
 ```
-## 2. Open the Project  
 
-### **Option A — Directly in Browser**  
-- Navigate to the project folder  
-- Double-click `index.html`  
-- The portfolio will open in your default browser  
-
-### **Option B — Local Development (Recommended)**  
-- Open the folder in **VS Code** (or another IDE)  
-- Install the **Live Server** extension  
-- Right-click `index.html` → *Open with Live Server*  
-- The project will run at `http://127.0.0.1:5500` (or a similar address)  
-
----
 
 ## 📑 Documentation  
 For more details, see:  
@@ -104,5 +161,5 @@ This assignment helped me understand how to transform static HTML pages into **e
 ---
 
 👨‍💻 **Author:** Abdulrahman  
-📅 **Assignment 3 — Portfolio Enhancement**
+📅 **Assignment 4 — Portfolio Enhancement**
 # assignment-4
