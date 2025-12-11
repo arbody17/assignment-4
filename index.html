@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Personal portfolio of Abdulrahman — student, builder, and researcher." />
+  <title>Abdulrahman | Portfolio</title>
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="site-header" id="top">
+    <nav class="nav container">
+      <a class="logo" href="#top">My Humble Portfolio<span class="dot">.</span></a>
+      <button id="themeToggle" class="btn btn-ghost" aria-pressed="false" aria-label="Toggle theme">🌓</button>
+    </nav>
+  </header>
+
+  <!-- Greeting Section -->
+  <section id="greetingSection" class="greeting-section">
+    <div id="namePrompt" class="name-prompt">
+      <label for="username">Hey there! What’s your name?</label><br>
+      <input id="username" type="text" placeholder="Enter your name">
+      <button id="saveName" class="btn btn-outline small">Save</button>
+    </div>
+
+    <h1 id="greeting" class="greeting-title">Good afternoon, friend!</h1>
+
+    <div class="greeting-image">
+      <img src="assets/images/funny.jpg" alt="Funny greeting image">
+    </div>
+
+    <section class="quote-card" aria-live="polite">
+      <div class="quote-header">
+        <span class="quote-label">⚡ Inspiration</span>
+        <button id="newQuoteBtn" class="btn btn-outline small">New quote</button>
+      </div>
+      <p id="quoteText" class="quote-text">
+        Loading a cool quote for you...
+      </p>
+      <p id="quoteAuthor" class="quote-author muted small">
+        &nbsp;
+      </p>
+    </section>
+  </section>
+
+  <!-- Tabs Navigation -->
+  <div class="tabs container">
+    <button class="tab-btn active" data-target="about">About</button>
+    <button class="tab-btn" data-target="projects">Projects</button>
+    <button class="tab-btn" data-target="contact">Contact</button>
+  </div>
+
+  <main id="main">
+    <!-- About -->
+    <section id="about" class="section container active-section">
+      <h2>About Me</h2>
+      <p>
+        I’m an undergraduate engineer at <strong>KFUPM</strong> who enjoys solving real-world problems with a mix of
+        <em>code, hardware, and systems thinking</em>. My work spans energy research, web development, and
+        collaborative student projects.
+      </p>
+
+      <div id="moreAbout" class="hidden-about">
+        <p>
+          Outside academics, I enjoy exploring robotics, AI innovation, and creative problem-solving through teamwork.
+          I’ve led student initiatives and research projects focused on sustainability, automation, and digital
+          transformation. When I’m not coding, you’ll probably find me experimenting with new tools or mentoring others.
+        </p>
+      </div>
+
+      <button id="toggleAbout" class="btn btn-outline small">Read More</button>
+      <p class="muted typing-tagline">
+        <span id="typing"></span>
+      </p>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section container">
+      <h2>Projects</h2>
+
+      <!-- Filter + Sort controls -->
+      <div class="projects-controls">
+        <label for="projectFilter">
+          Filter:
+          <select id="projectFilter">
+            <option value="all">All projects</option>
+            <option value="web">Web / Frontend</option>
+            <option value="ai">AI / Club</option>
+            <option value="research">Research</option>
+          </select>
+        </label>
+
+        <label for="projectSort">
+          Sort:
+          <select id="projectSort">
+            <option value="newest">Newest first</option>
+            <option value="oldest">Oldest first</option>
+          </select>
+        </label>
+      </div>
+
+      <div id="projectList" class="grid cards">
+        <article class="card" data-type="ai" data-date="2023-09-01">
+          <img src="assets/images/AIClub.png" alt="AI Club" width="640" height="360" loading="lazy">
+          <div class="card-body">
+            <h3>AIFA Club</h3>
+            <p>
+              I co-founded this student club to make AI knowledge accessible for everyone.
+              We aimed to create a community hub for teaching AI and its applications,
+              while connecting technology to real-world needs across various disciplines.
+            </p>
+          </div>
+        </article>
+
+        <article class="card" data-type="research" data-date="2022-07-01">
+          <img src="assets/images/canadaResearch.jpeg" alt="WAAM Melt Pool Segmentation Research" width="640" height="360" loading="lazy">
+          <div class="card-body">
+            <h3>WAAM Research – University of Alberta</h3>
+            <p>
+              I worked on image processing and segmentation of the melt pool in Wire Arc Additive Manufacturing (WAAM)
+              at the University of Alberta in Canada. I focused on developing an AI model for accurate detection and
+              real-time monitoring of melt pool behavior.
+            </p>
+          </div>
+        </article>
+
+        <article class="card" data-type="web" data-date="2024-02-10">
+          <img src="assets/images/webProject.png" alt="Personal portfolio website" width="640" height="360" loading="lazy">
+          <div class="card-body">
+            <h3>Personal Portfolio Website</h3>
+            <p>
+              A responsive portfolio built as part of the course assignments, showcasing theme toggling,
+              interactive forms, API integration, and stateful UI features.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <!-- GitHub API integration -->
+      <section class="live-projects">
+        <h3>Latest GitHub Activity</h3>
+        <p id="githubStatus" class="muted small">
+          Loading your latest repositories...
+        </p>
+        <div id="githubRepos" class="grid cards github-grid"></div>
+      </section>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section container">
+      <h2>Contact</h2>
+      <form id="contactForm" class="contact-form" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your full name" required>
+          <small class="error" aria-live="polite"></small>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="name@example.com" required>
+          <small class="error" aria-live="polite"></small>
+        </div>
+
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="How can I help?" required></textarea>
+          <small class="error" aria-live="polite"></small>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn">Send (demo)</button>
+          <button type="reset" class="btn btn-outline">Reset</button>
+        </div>
+
+        <p class="muted small">Note: This is a front-end demo—no backend is connected.</p>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Abdulrahman — Built for Assignment 4.</p>
+      <a href="#top" class="to-top" aria-label="Back to top">↑</a>
+    </div>
+    <div class="container footer-stats">
+      <p class="muted small">
+        Time on this page: <span id="timeOnSite">0</span> seconds ·
+        Your visit number: <span id="visitCount">1</span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+</body>
+
+</html>
