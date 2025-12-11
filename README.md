@@ -139,8 +139,8 @@ cd assignment-4
 For more details, see:  
 - [`docs/technical-documentation.md`](docs/technical-documentation.md)  
 - [`docs/ai-usage-report.md`](docs/ai-usage-report.md)  
-- [`presentation/Interactive-Portfolio-Showcase.pdf`](presentation/Interactive-Portfolio-Showcase.pdf) 
-
+- [View PDF Slides]() *(https://drive.google.com/file/d/1Hk-YnD1QKcWoeVPjm4M9memFEdeSTP4b/view?usp=drive_link)*  
+- [View Portfolio Online]() *(https://drive.google.com/file/d/10aUwwSI3RH8sHUPaWnJB_nMqr53HjRq-/view?usp=drive_link)* 
 
 ---
 
